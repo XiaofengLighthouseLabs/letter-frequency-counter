@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>letter frequency counter</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Tamma|Poppins" rel="stylesheet">
+  </head>
+  <body>
+    <div class='title'>
+      <h1>Letter Frequency Counter</h1>
+    </div>
+    <div class='content'>
+      <div class='textArea'>
+
+        <div id='notice' class='notice'>Please enter your text.</div>
+        <div id='noticeError' class='noticeError'>Oops, there is NO letter!</div>
+
+        <form id='form1' class='form1'>
+          <textarea rows='5' cols='50' type='text' name='word'  placeholder='eg. This is a letter frequency counter developed by Xiaofeng.'></textarea>
+        </form>
+
+        <div class='button'>
+          <button class='countButton' onclick='createChart()'>Count</button>
+          <button class='resetButton' onclick='reset()'>Reset</button>
+        </div>
+
+        <div id='output' class='output'></div>
+
+      </div>
+
+      <div class='chartArea'>
+         <div id='chartNotice' class='chartNotice'>
+          <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+          </ul>
+          <h2>No Letter to Count<h2>
+         </div>
+        <canvas id="pie-chart" width="800" height="600"></canvas>
+      </div>
+
+    </div>
+
+    <script src="index.js"></script>
+    <script src="./lib/Chart.bundle.js"></script>
+    <script src="./lib/chartjs-plugin-datalabels.js"></script>
+
+  </body>
+</html>
+
